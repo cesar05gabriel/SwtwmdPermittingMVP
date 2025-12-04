@@ -1,6 +1,6 @@
 ## SWFWMD Permitting – MVP Submission
 
-This project is a simple MVP implementation of a permit application system, created as part of a technical exercise. It includes a frontend form, basic backend logic, database integration, and the structure for address validation using USPS Web Tools.
+This project is a simple MVP implementation of a permit application system, created as part of a technical exercise. It includes a frontend form, basic backend logic and database integration. 
 
 Project Overview
 
@@ -29,8 +29,6 @@ The application provides:
 - Data persistence using Prisma + PostgreSQL
 
 - A database schema following the requirements of the exercise
-
-- Pseudocode and design diagrams describing the flow of the application
 
 ## Tech Stack
 
