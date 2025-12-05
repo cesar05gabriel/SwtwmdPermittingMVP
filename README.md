@@ -1,6 +1,7 @@
 ## SWFWMD Permitting – MVP Submission
 
-This project is a simple MVP implementation of a permit application system, created as part of a technical exercise. It includes a frontend form, basic backend logic and database integration. 
+This project is a simple MVP implementation of a permit application system, created as part of a technical exercise. It includes a frontend form, basic backend logic and database integration.
+I also added a short demo video in the doc folder for reference. 
 
 Project Overview
 
