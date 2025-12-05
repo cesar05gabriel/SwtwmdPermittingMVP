@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { router, publicProcedure } from "../trpc";
+import { validateAddressWithUSPS } from "@/server/usps/uspsClient";
 
 export const permitRouter = router({
   submit: publicProcedure
@@ -15,6 +16,19 @@ export const permitRouter = router({
       })
     )
     .mutation(async ({ input, ctx }) => {
+
+      // USPS validation (Not working)
+      const usps = await validateAddressWithUSPS({
+        address: input.address,
+        city: input.city,
+        state: input.state,
+        zip: input.zip,
+      });
+
+      if (!usps.success) {
+        // return an error that frontend can handle properly
+        throw new Error(`USPS validation failed: ${usps.reason}`);
+      }
         // Map frontend keys to DB fields
         const created = await ctx.prisma.user_permit.create({
           data: {
